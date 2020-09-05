@@ -1,0 +1,257 @@
+@charset "UTF-8";
+
+html {
+    font-size: 62.5%;
+}
+
+*, *::before: , *::after {
+    /* *だけだとす疑似要素は含まれないのでbefore,afterを付ける */
+    box-sizing: border-box;
+}
+
+
+body {
+    background: #151515 url('3315390_m.jpg') no-repeat fixed left bottom;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: Raleway, "Hiragino kaku Gothic ProN", Meiryo , sans-serif;
+}
+
+.header {
+    padding: 250px 30px 80px;
+    height: 80vh;
+}
+
+.item {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.6) inset;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.6) inset;
+    position: relative;
+}
+.item:after {
+    content: "";
+    display: block;
+    width: 20%;
+    height: 20%;
+    border-radius: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    right: 15%;
+    top: 15%;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    transform: rotateZ(45deg) scaleY(0.8);
+    -webkit-transform: rotateZ(45deg) scaleY(0.8);
+}
+
+/*animation Setting*/
+@keyframes move {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-1000px); opacity: 0; }
+}
+@-webkit-keyframes move {
+    0% { -webkit-transform: translateY(0px); }
+    100% { -webkit-transform: translateY(-1000px); opacity: 0; }
+}
+ 
+/*animation Play*/
+.move {
+    animation: move 5s cubic-bezier(0.47, 0, 0.745, 0.715) 0s infinite normal;
+    -webkit-animation: move 5s cubic-bezier(0.47, 0, 0.745, 0.715) 0s infinite normal;
+ 
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+}
+
+
+.site-title-sub {
+    margin: 0 0 30px;
+    letter-spacing: 1px;
+    font-size: 2.2rem;
+}
+
+.site-title {
+    margin: 50px 0 40px;
+    font-size: 7.6rem;
+    text-shadow:  2px  2px 1px #000000;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    list-style: none;
+    margin: 50px 30px;
+    width: 150px;
+    height: auto;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+.menu li a {
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-shadow:  2px  2px 1px #000000;
+
+}
+
+.menu li:hover {
+    background-color: rgb(50, 190, 255);
+    transition: all 0.3s;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* section */
+
+.about {
+    padding: 80px 30px;
+    background-color: #fff;
+    color: #000;
+}
+
+.heading {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+    margin: 30px 0 15px;
+    letter-spacing: 2px;
+    font-size: 4rem;
+}
+.heading::before,
+.heading::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #999;
+}
+
+.heading::before {
+    bottom: 5px;
+}
+
+.text {
+    line-height: 2.5;
+    margin-top: 50px;
+}
+
+
+
+/* product */
+
+.works {
+    padding: 80px 0;
+}
+
+.works-wrapper {
+    display: table;
+    widows: 100%;
+    margin-top: 60px;
+    table-layout: fixed;
+}
+
+.work-box {
+    display: table-cell;
+}
+
+
+.work-image {
+    display: block;
+    width: 100%;
+}
+
+.effect-fade {
+    opacity : 0;
+    transform : translate(0, 100px);
+    transition : all 900ms;
+    }
+    
+.effect-fade.effect-scroll {
+    opacity : 1;
+    transform : translate(0, 0);
+}
+
+
+
+/* skills */
+
+.skills {
+    background-color: #fff;
+    padding: 80px 0;
+    color: #333;
+}
+
+.skills-wrapper {
+    display: table;
+    width: 80%;
+    margin: 50px auto 0;
+    table-layout: fixed;
+}
+
+.skill-box {
+    display: table-cell;
+}
+
+.fab {
+    width: 150px;
+    height: 100px;
+    font-size: 8rem;
+    margin-bottom: 30px;
+    color: rgb(19, 177, 177);
+    line-height: 142px;
+}
+
+
+/* contact */
+
+.contact_form {
+    width: 50%;
+    margin: 50px auto 0;
+}
+
+.contact_form input[type=text],
+.contact_form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+    
+.contact_form textarea {
+    height: 150px;
+}
+
+.contact_form input[type=submit] {
+    display: block;
+    width: 200px;
+    margin: 40px auto 15px;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.contact_form input[type=submit]:hover {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: rgb(0, 0, 0);
+}

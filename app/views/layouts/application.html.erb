@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>hideakifolio</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <header class="header">
+        <div class="move"><div class="item shake"></div></div>
+        <p class="site-title-sub">welcome hide page</p>
+        <h1 class="site-title">HIDE works</h1>
+        <ul class="menu">
+            <li><a href="#">about me</a></li>
+            <li><a href="#">product</a></li>
+            <li><a href="#">skills</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+    </header>
+
+    <section class="about">
+        <h2 class="heading effect-fade">ABOUT me</h2>
+        <P class="text effect-fade">はじめまして、高橋秀明と申します！<br>
+            私は、半年前にプログラミングを初めました。今出来る言語としては、HTML,CSS,Ruby,Railsがあります！</P>
+    </section>
+
+    <section class="works">
+        <h2 class="heading effect-fade">PRODUCT</h2>
+        <div class="works-wrapper">
+            <div class="work-box">
+                <img class="work-image effect-fade" src="assets/963199_l.jpg" alt="画像">
+                <P>aaaaaaa</P>
+            </div>
+            <div class="work-box">
+                <img class="work-image effect-fade" src="assets/963199_l.jpg" alt="画像">
+                <P>aaaaaaa</P>
+            </div>
+            <div class="work-box">
+                <img class="work-image effect-fade" src="assets/963199_l.jpg" alt="画像">
+                <P>aaaaaaa</P>
+            </div>
+            <div class="work-box">
+                <img class="work-image effect-fade" src="assets/963199_l.jpg" alt="画像">
+                <P>aaaaaaa</P>
+            </div>
+        </div>
+        <!-- <div class="works-wrapper">
+            <div class="work-box">
+                <img class="work-image" src="img/963199_l.jpg" alt="画像">
+                <P>aaaaaaa</P>
+            </div>
+            <div class="work-box">
+                <img class="work-image" src="img/963199_l.jpg" alt="画像">
+                <P>aaaaaaa</P>
+            </div>
+            <div class="work-box">
+                <img class="work-image" src="img/963199_l.jpg" alt="画像">
+                <P>aaaaaaa</P>
+            </div>
+            <div class="work-box">
+                <img class="work-image" src="img/963199_l.jpg" alt="画像">
+                <P>aaaaaaa</P>
+            </div>
+            
+             -->
+        </div>
+    </section>
+
+    <section class="skills">
+        <h2 class="heading effect-fade">my skills</h2>
+        <div class="skills-wrapper">
+            <div class="skill-box effect-fade">
+                <i class="fab fa-html5"></i>
+                <div class="skill-title">アイデア</div>
+                <P class="skill-text">aaaaaa</P>
+            </div>
+            <div class="skill-box effect-fade">
+                <i class="fab fa-css3-alt"></i>
+                <div class="skill-title">アイデア</div>
+                <P class="skill-text">aaaaaa</P>
+            </div>
+            <div class="skill-box effect-fade">
+                <i class="fab fa-java"></i>
+                <div class="skill-title">アイデア</div>
+                <P class="skill-text">aaaaaa</P>
+            </div>
+            <div class="skill-box effect-fade">
+                <i class="fab fa-github"></i>
+                <div class="skill-title">アイデア</div>
+                <P class="skill-text">aaaaaa</P>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2 class="heading effect-fade">CONTACT</h2>
+        <form class="contact_form effect-fade">
+            <input type="text" name="name">
+            <textarea name="message"></textarea>
+            <input type="submit" value="SEND">
+        </form>
+        </form>
+    </section>
+
+    <footer class="footer">
+        
+    </footer>
+    <%# <%= yield %> 
+</body>  
+</html>
